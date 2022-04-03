@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav"></div>
+    <div class="container">
+        <form class="main" action="page2.html" onsubmit="return nameValidation()&&emailValidation()&&operatorValidation()&&stateValidation()&&phLen()" name="myForm" method="get">
+            <div class="fullName elems" >
+                <div>Full Name:<sup>*</sup></div>
+                <div id="name"><input id="clear1" type="alphabets" onchange="nameValidation();settingLocalStorage()" placeholder="First Name" value ="" name="fName" required min="2"><input id="clear2" onchange="nameValidation()" placeholder="Last Name" type="text" value="" name="lName" required min="2"><sup id="nameError" class="error"></sup></div>
+            </div>
+
+            <div class="emailVerf elems" id="Email">
+                <div>Email:<sup>*</sup></div>
+                <div id="mailId"><input id="clear3" type="text number" name="mailId" required onchange="emailValidation()"><span></span><sup id="mailError" class="error"></sup></div>
+            </div>
+
+            <div class="phNoVerf elems" id="phhNo">
+                <div>Phone Number:</div>
+                <div id="phNum"><input  id="phone-number"  onkeypress="phoneNumberFormatter();operatorValidation();stateValidation()" onblur="settingLocalStorage()"  maxlength="" name="phoneNumber"/><span id="warning"></span><img id="logo" src="" alt="" class="src"><spanc id="state"></spanc></div>
+
+            </div>
+
+            <div class="butt elems"><input onclick="appendingChild()" onsubmit="phLen()" type="submit" ></div>
+
+
+
+        </form>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="page2.js"></script>
+</html>

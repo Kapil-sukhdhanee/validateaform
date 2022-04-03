@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP verification</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav"></div>
+    <div class="thankUMsg">
+      <div class="a2container">
+        <form
+          action="http://pixel6.co/"
+          onsubmit="return verifyOtp()"
+          name="form2"
+          id="mainfrm"
+          method="get"
+        >
+          <input
+            name="otp"
+            type="text"
+            id="otpid"
+            onchange=""
+            placeholder="Enter OTP"
+            onsubmit="clearVal()"
+          />
+          <input type="submit" value="Validate" /><samp
+            id="invalidOtp"
+            style="color: red"
+          ></samp>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="page2.js"></script>
+</html>
